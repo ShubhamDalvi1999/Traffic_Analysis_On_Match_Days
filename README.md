@@ -61,3 +61,34 @@
 
 <br/>
 
+# Traffic Analysis and Event Day Impact
+
+This project analyzes traffic data to gain insights on vehicle flow during normal days and game event days. The project involves processing a raw traffic data file, cleaning the data, and combining it with event day information to extract useful insights. 
+
+## Project Overview
+
+The goal of this project is to:
+- Read and process traffic data from a text file.
+- Transform and clean the data using PySpark.
+- Aggregate the data to calculate vehicle counts per day.
+- Integrate event day data to analyze the difference in traffic during regular days and game days.
+- Provide summary statistics and insights.
+
+## Technologies Used
+
+- PySpark
+- Spark SQL
+- Python
+
+## Data Sources
+
+1. **Traffic Data (`Dodgers.data`)**: Contains timestamp and number of cars.
+2. **Game Events Data (`Dodgers.events`)**: Contains game day information.
+
+## Steps Involved
+
+### 1. Data Loading
+- The project reads raw traffic data using `SparkSession` and loads it into a DataFrame.
+```python
+traffic = sc.read.text("Dodgers.data")
+```
